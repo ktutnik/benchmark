@@ -1,0 +1,20 @@
+{
+  "name": "benchmark",
+  "version": "1.0.0",
+  "description": "This project will be an optimization reference for KambojaJS framework. The idea is to compare the performance of Express and KambojaJS to get performance loss.",
+  "main": "index.js",
+  "dependencies": {
+    "@plumjs/plumier": "^0.1.2",
+    "@types/express": "^4.16.0",
+    "@types/koa-router": "^7.0.31",
+    "express": "^4.16.3",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

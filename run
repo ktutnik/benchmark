@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+server="$1"
+NODE_ENV=production node ./$server &
+pid=$!
+
+sleep 5
+
+echo "$1" >> complete-result.txt
+
+wrk "http://127.0.0.1:5000/$2" \
+  -d 30s \
+  -c 400 \
+  -t 12 \
+  | tee -a complete-result.txt \
+  | grep 'Requests/sec' \
+  | awk -v server="$server" '{ print $2 " Req/sec - " server }' >> results.txt
+
+kill $pid
+
+echo "" >> complete-result.txt
