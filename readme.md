@@ -16,6 +16,7 @@ Clone project then enter to the directory
 ```
 git clone https://github.com/ktutnik/benchmark.git
 cd benchmark
+npm install
 ```
 
 Compile project
